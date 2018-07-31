@@ -1,0 +1,8 @@
+{
+  "/auth": {
+    "target": "http://usrscp29:5050",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}
