@@ -6,18 +6,18 @@ export function initializer(keycloak: KeycloakService): () => Promise<any> {
       try {
 	await keycloak.init({
     	config: {
-      	url: 'http://usrscp29:5050/auth',
-      	realm: 'dts',
-      	clientId: 'navigator'
+      		url: 'http://usrscp29:5050/auth',
+      		realm: 'dts',
+      		clientId: 'navigator'
     	},
     	initOptions: {
-      	onLoad: 'login-required',
-      	checkLoginIframe: false
-    },
+      		onLoad: 'login-required',
+      		checkLoginIframe: false
+   	},
     	enableBearerInterceptor: true,
     	bearerExcludedUrls: [
-      	'/assets',
-      	'/clients/public'
+      		'/assets',
+      		'/clients/public'
     	],
   	});
         resolve();
